@@ -2,6 +2,7 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
   <el-button type="primary">大家好</el-button>
+  <router-view></router-view>
 </template>
 
 <script>
