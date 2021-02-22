@@ -1,19 +1,15 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  <el-button type="primary">大家好</el-button>
+  <img alt="Vue logo" style="width:20%" src="./assets/bookbar.png">
+  <el-button type="primary">此处为切换组件</el-button>
+  <p>=============以下展示内容=============</p>
   <router-view></router-view>
 </template>
 
 <script lang='ts'>
 import {defineComponent} from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
 
 export default defineComponent ({
   name: 'App',
-  components: {
-    HelloWorld
-  }
 })
 </script>
 

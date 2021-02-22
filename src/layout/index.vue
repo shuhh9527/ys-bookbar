@@ -1,6 +1,6 @@
 <template>
    <div>
-       表单1
+       我是首页
    </div>
 </template>
 

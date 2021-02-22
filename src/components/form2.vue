@@ -1,6 +1,6 @@
 <template>
    <div>
-       表单1
+       表单2
    </div>
 </template>
 
