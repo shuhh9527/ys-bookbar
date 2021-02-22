@@ -4,9 +4,9 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 // 定义路由
 // 每个路由都需要映射到一个组件。
 const routes = [
-    { path: '/', component: ()=> import('@/App.vue') },
+    { path: '/', component: ()=> import('@/layout/index.vue') },
     { path: '/btn1', component: ()=> import('@/components/btn1.vue') },
-
+    { path: '/form', component: ()=> import('@/components/form.vue') },
 ]
 
 // 创建路由实例并传递 `routes` 配置

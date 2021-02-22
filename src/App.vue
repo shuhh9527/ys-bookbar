@@ -1,18 +1,19 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Navbar></Navbar>
+  <Bar></Bar>
   <el-button type="primary">大家好</el-button>
   <router-view></router-view>
 </template>
 
 <script lang='ts'>
 import {defineComponent} from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
-
+import  Navbar from './layout/navbar/index.vue'
+import Bar from './layout/tab/index.vue'
 export default defineComponent ({
   name: 'App',
-  components: {
-    HelloWorld
+  components:{
+    Navbar,
+    Bar
   }
 })
 </script>
@@ -24,6 +25,7 @@ export default defineComponent ({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 20px;
+  height: 100vh;
 }
 </style>
