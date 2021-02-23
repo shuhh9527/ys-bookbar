@@ -5,7 +5,9 @@ import {createRouter,createWebHashHistory} from 'vue-router'
 // 每个路由都需要映射到一个组件。
 const routes = [
     { path: '/', component: ()=> import('@/layout/index.vue') },
-    { path: '/btn1', component: ()=> import('@/components/btn1.vue') },
+    { path: '/form1', component: () => import('@/views/form/form1.vue') },
+    { path: '/form2', component: () => import('@/views/form/form2.vue') },
+
 
 ]
 

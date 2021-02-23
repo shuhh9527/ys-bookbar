@@ -1,15 +1,20 @@
 <template>
-  <img alt="Vue logo" style="width:20%" src="./assets/bookbar.png">
-  <el-button type="primary">此处为切换组件</el-button>
-  <p>=============以下展示内容=============</p>
+  <Navbar></Navbar>
+  <Menu></Menu>
   <router-view></router-view>
 </template>
 
 <script lang='ts'>
 import {defineComponent} from 'vue'
+import Navbar from '@/layout/navbar/index.vue'
+import Menu from '@/layout/menu/index.vue'
 
 export default defineComponent ({
   name: 'App',
+  components:{
+    Navbar,
+    Menu
+  }
 })
 </script>
 
@@ -18,8 +23,7 @@ export default defineComponent ({
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  /* text-align: center; */
+  /* color: #2c3e50; */
 }
 </style>
