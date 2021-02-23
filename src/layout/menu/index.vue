@@ -7,18 +7,20 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent } from 'vue'
+import { defineComponent,ref } from 'vue'
+import { useRouter } from 'vue-router'
 export default defineComponent({
     name:'Menu',
-    data(){
+    setup(){
+        const router = useRouter()
+        const activeIndex = ref('/')
+        const handleSelect = ((key:string) => {
+        router.push(key)
+        })
         return {
-            activeIndex:'/'
-        }
-    },
-    methods: {
-      handleSelect(key) {
-        this.$router.push(key)
-      }
+            activeIndex,
+            handleSelect
+            }
     }
 })
 </script>
