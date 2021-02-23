@@ -8,12 +8,16 @@
 
 <script lang='ts'>
 import { defineComponent,ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 export default defineComponent({
     name:'Menu',
     setup(){
         const router = useRouter()
-        const activeIndex = ref('/')
+        const routes = useRoute()
+
+        const activeIndex = ref(routes.path)
+        router.push(activeIndex.value)
+
         const handleSelect = ((key:string) => {
         router.push(key)
         })
