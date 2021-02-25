@@ -9,10 +9,10 @@
 |增加vue-router|yangzy|完成
 |增加ts|yangzy|完成
 |增加element-plus|shuhh|完成
-|增加mock|yangzy|未完成
-|增加axios|yangzy|未完成
+|增加mock|yangzy|完成
+|增加axios|yangzy|完成
 |增加vuex|shuhh|未完成
-|增加sass|shuhh|未完成
+|增加sass|shuhh|完成
 
 #### 新增功能需求
 1. 购买书籍的表单开发

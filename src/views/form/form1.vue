@@ -1,5 +1,6 @@
 <template>
   <div class="form">我是表单1</div>
+  <el-button @click="getMock">模拟请求mock</el-button>
 </template>
 
 <script lang='ts'>
@@ -11,9 +12,14 @@ export default defineComponent({
     
     // const { ctx } = getCurrentInstance()
     const axios = getCurrentInstance()?.appContext?.config.globalProperties?.$axios
-    axios.get('/test').then((res:any)=>{
-        console.log(res)
-    })
+    const getMock = (() => {
+        axios.get('/test').then((res:any)=>{
+            console.log(res)
+        })      
+      })
+  return {
+    getMock
+  }
   },
 });
 </script>
