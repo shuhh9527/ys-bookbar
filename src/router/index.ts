@@ -7,8 +7,7 @@ const routes = [
     { path: '/', component: ()=> import('@/layout/index.vue') },
     { path: '/form1', component: () => import('@/views/form/form1.vue') },
     { path: '/form2', component: () => import('@/views/form/form2.vue') },
-
-
+    { path: '/vuex', component: () => import('@/views/form/store.vue') },
 ]
 
 // 创建路由实例并传递 `routes` 配置

@@ -3,6 +3,7 @@
         <el-menu-item index="/">首页</el-menu-item>
         <el-menu-item index="/form1">表单1</el-menu-item>
         <el-menu-item index="/form2">表单2</el-menu-item>
+        <el-menu-item index="/vuex">store测试</el-menu-item>
     </el-menu>
 </template>
 
