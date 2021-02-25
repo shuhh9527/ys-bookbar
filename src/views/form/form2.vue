@@ -1,6 +1,6 @@
 <template>
     <div class="form">
-            我是表单2
+           <div class="zjh">大家好我是张家辉，测试一下scss</div>
     </div>
 </template>
 
@@ -11,11 +11,14 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
     .form{
         width: 100%;
         height: 100px;
-        background-color:chartreuse
+        background-color:chartreuse;
+        .zjh{
+            color:red
+        }
     }
 
 
