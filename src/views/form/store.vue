@@ -1,29 +1,29 @@
 <template>
-  <div>{{count}}</div>
+<p>store.state.user.userName拿出来的</p>
+  <div>{{stateData}}</div>
+<p>mapGetters拿出来的</p>
+  <div>{{mapData}}</div>
+
   <el-button @click="abc">点我改变user</el-button>
 </template>
 
 <script>
 import { computed } from 'vue'
-import { useStore } from 'vuex'
+import { mapGetters, useStore } from 'vuex'
 export default {
   setup () {
     const store = useStore()
     const abc = (() => {
-      store.dispatch('updateUserInfo',{
-        user:'lj',
-        password:'1234'
-      })
+      store.dispatch('user/updateUserName','我改名字了')
     })
-    const count =  computed(() => store.state.userInfo.user)
+    const stateData =  computed(() => store.state.user.userName)
+// const { mapData } = computed(...mapGetters(['userName']))
+    // mapData
+
     return {
       abc,
-      count
-      // evenOrOdd: computed(() => store.getters.evenOrOdd),
-      // increment: () => store.dispatch('increment'),
-      // decrement: () => store.dispatch('decrement'),
-      // incrementIfOdd: () => store.dispatch('incrementIfOdd'),
-      // incrementAsync: () => store.dispatch('incrementAsync')
+      stateData,
+      mapData
     }
   }
 }

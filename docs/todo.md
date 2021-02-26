@@ -11,7 +11,7 @@
 |增加element-plus|shuhh|完成
 |增加mock|yangzy|完成
 |增加axios|yangzy|完成
-|增加vuex|shuhh|未完成
+|增加vuex|shuhh|完成
 |增加sass|shuhh|完成
 
 #### 新增功能需求

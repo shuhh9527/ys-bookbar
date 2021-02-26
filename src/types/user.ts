@@ -4,3 +4,7 @@ export interface UserState {
   password: string;
 }
 
+export interface bookName {
+  bookName: string;
+}
+
