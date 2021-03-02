@@ -7,12 +7,14 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, getCurrentInstance } from "vue";
+// import { defineComponent, getCurrentInstance } from "vue";
+import { defineComponent } from "vue";
+import { userInfo, userLogin  } from '../../api/user'
 export default defineComponent({
   name: "Form1",
   setup() {
     // const { ctx } = getCurrentInstance()
-    const axios = getCurrentInstance()?.appContext?.config.globalProperties?.$axios
+    // const axios = getCurrentInstance()?.appContext?.config.globalProperties?.$axios
     const obj = {
       username:'zhangsan',
       password:'123'
@@ -23,14 +25,20 @@ export default defineComponent({
     //     })  
     //   })
     const getMock = (() => {
-        axios.get('/user/info').then((res:any)=>{
-            console.log(res)
-        })  
+        // axios.get('/user/info').then((res:any)=>{
+        //     console.log(res)
+        // })  
+        userInfo().then((res:any)=>{   
+          console.log(res)
+        }) 
       })
       const getMock2 = (() => {
-        axios.post('/user/login',obj).then((res:any)=>{
+        // axios.post('/user/login',obj).then((res:any)=>{
+        //     console.log(res)
+        // })  
+        userLogin(obj).then((res:any)=>{
             console.log(res)
-        })  
+        })          
       })
   return {
     getMock,
