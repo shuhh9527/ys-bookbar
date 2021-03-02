@@ -5,8 +5,12 @@ import 'element-plus/lib/theme-chalk/index.css'
 import router from './router'
 import axios from 'axios'
 import store from './store'
-if(process.env.NODE_ENV === 'development'){
-    require('@/mock');
+// if(process.env.NODE_ENV === 'development'){
+//     require('@/mock');
+// }
+
+if (process.env.NODE_ENV === 'development') {
+    require('../mock/index.ts')
 }
 
 const app = createApp(App)

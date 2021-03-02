@@ -1,6 +1,9 @@
 <template>
   <div class="form">我是表单1</div>
-  <el-button @click="getMock">模拟请求mock</el-button>
+  <!-- <el-button @click="getMock1">原Mock</el-button> -->
+  <el-button @click="getMock">测试get</el-button>
+  <el-button @click="getMock2">测试post</el-button>
+
 </template>
 
 <script lang='ts'>
@@ -8,17 +11,31 @@ import { defineComponent, getCurrentInstance } from "vue";
 export default defineComponent({
   name: "Form1",
   setup() {
-    console.log(getCurrentInstance())
-    
     // const { ctx } = getCurrentInstance()
     const axios = getCurrentInstance()?.appContext?.config.globalProperties?.$axios
+    const obj = {
+      username:'zhangsan',
+      password:'123'
+    }
+    // const getMock1 = (() => {
+    //     axios.get('/test').then((res:any)=>{
+    //         console.log(res)
+    //     })  
+    //   })
     const getMock = (() => {
-        axios.get('/test').then((res:any)=>{
+        axios.get('/user/info').then((res:any)=>{
             console.log(res)
-        })      
+        })  
+      })
+      const getMock2 = (() => {
+        axios.post('/user/login',obj).then((res:any)=>{
+            console.log(res)
+        })  
       })
   return {
-    getMock
+    getMock,
+    // getMock1,
+    getMock2
   }
   },
 });
